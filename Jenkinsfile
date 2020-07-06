@@ -3,6 +3,9 @@
 node {
    stage 'Checkout'
         checkout scm
+   
+   stage 'npm setting'
+        sh 'npm config set registry http://registry.npmjs.org/'
 
    stage 'Setup'
         sh 'npm install'
